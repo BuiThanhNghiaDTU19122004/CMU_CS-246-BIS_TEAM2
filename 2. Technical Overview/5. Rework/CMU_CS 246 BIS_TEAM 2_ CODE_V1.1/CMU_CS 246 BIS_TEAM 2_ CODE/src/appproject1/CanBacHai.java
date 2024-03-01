@@ -17,6 +17,7 @@ public class CanBacHai extends javax.swing.JFrame {
      */
     public CanBacHai() {
         initComponents();
+        setTitle("Square root");
     }
     private boolean isNumber(String str) {
         try {

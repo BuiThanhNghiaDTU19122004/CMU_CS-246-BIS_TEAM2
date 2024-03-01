@@ -4,8 +4,6 @@
  */
 package appproject1;
 
-import square_function.Square_Function;
-
 
 /**
  *
