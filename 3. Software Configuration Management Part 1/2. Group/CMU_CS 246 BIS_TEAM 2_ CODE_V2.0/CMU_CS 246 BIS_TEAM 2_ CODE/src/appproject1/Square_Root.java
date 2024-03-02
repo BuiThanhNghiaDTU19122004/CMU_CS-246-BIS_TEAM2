@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author LENOVO LEGION
  */
-public class CanBacHai extends javax.swing.JFrame {
+public class Square_Root extends javax.swing.JFrame {
 
     /**
      * Creates new form CanBacHai
      */
-    public CanBacHai() {
+    public Square_Root() {
         initComponents();
         setTitle("Square root");
     }
@@ -224,20 +224,20 @@ public class CanBacHai extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CanBacHai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Square_Root.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CanBacHai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Square_Root.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CanBacHai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Square_Root.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CanBacHai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Square_Root.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CanBacHai().setVisible(true);
+                new Square_Root().setVisible(true);
             }
         });
     }

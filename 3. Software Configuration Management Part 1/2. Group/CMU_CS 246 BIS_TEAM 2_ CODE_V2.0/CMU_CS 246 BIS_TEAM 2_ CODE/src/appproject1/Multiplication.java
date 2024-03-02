@@ -49,6 +49,10 @@ public class Multiplication extends javax.swing.JFrame {
         c = new javax.swing.JTextField();
         clear = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        BackRightA1 = new javax.swing.JButton();
+        BackRightB = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,6 +104,34 @@ public class Multiplication extends javax.swing.JFrame {
             }
         });
 
+        BackRightA1.setText("");
+        BackRightA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackRightA1ActionPerformed(evt);
+            }
+        });
+
+        BackRightB.setText("");
+        BackRightB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackRightBActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2DeleteButton(evt);
+            }
+        });
+
+        jButton3.setText("");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -121,17 +153,27 @@ public class Multiplication extends javax.swing.JFrame {
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(c, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
-                                .addComponent(a)
-                                .addComponent(b))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(jLabel1))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(b, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                        .addComponent(a, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(BackRightB)
+                                        .addComponent(BackRightA1))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING))))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(back)))
-                .addContainerGap(97, Short.MAX_VALUE))
+                        .addComponent(back))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addComponent(jLabel1)))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,14 +183,20 @@ public class Multiplication extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BackRightA1))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BackRightB)
+                            .addComponent(jButton3)))
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(clear))
@@ -209,6 +257,51 @@ public class Multiplication extends javax.swing.JFrame {
         dispose();// Tắt tab chức năng nhân
     }//GEN-LAST:event_backActionPerformed
 
+    private void BackRightA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackRightA1ActionPerformed
+        String backspace = null;
+
+        if(a.getText().length() > 0) {
+            StringBuilder s= new StringBuilder(a.getText());
+            s.deleteCharAt(a.getText().length() -1);
+            backspace = s.toString();
+            a.setText(backspace);
+        }
+    }//GEN-LAST:event_BackRightA1ActionPerformed
+
+    private void BackRightBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackRightBActionPerformed
+        String backspace = null;
+
+        if(b.getText().length() > 0) {
+            StringBuilder s= new StringBuilder(b.getText());
+            s.deleteCharAt(b.getText().length() -1);
+            backspace = s.toString();
+            b.setText(backspace);
+        }
+    }//GEN-LAST:event_BackRightBActionPerformed
+
+    private void jButton2DeleteButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2DeleteButton
+        String delete = null;
+
+        if(a.getText().length() > 0) {
+            StringBuilder s= new StringBuilder(a.getText());
+            s.deleteCharAt(0);
+            delete = s.toString();
+            a.setText(delete);
+        }
+    }//GEN-LAST:event_jButton2DeleteButton
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String delete = null;
+        if(b.getText().length() > 0 ) {
+            StringBuilder s= new StringBuilder(b.getText());
+            s.deleteCharAt(0);
+            delete = s.toString();
+            b.setText(delete);
+
+        }
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -256,12 +349,16 @@ public class Multiplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackRightA1;
+    private javax.swing.JButton BackRightB;
     private javax.swing.JTextField a;
     private javax.swing.JTextField b;
     private javax.swing.JButton back;
     private javax.swing.JTextField c;
     private javax.swing.JButton clear;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
