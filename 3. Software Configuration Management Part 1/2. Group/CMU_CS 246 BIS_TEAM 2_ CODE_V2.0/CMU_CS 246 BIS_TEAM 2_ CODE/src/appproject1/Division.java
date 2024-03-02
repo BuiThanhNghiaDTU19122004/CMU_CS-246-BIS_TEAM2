@@ -40,6 +40,10 @@ public class Division extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         result = new javax.swing.JTextField();
         back1 = new javax.swing.JButton();
+        BackRightA3 = new javax.swing.JButton();
+        BackRightB = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +95,34 @@ public class Division extends javax.swing.JFrame {
             }
         });
 
+        BackRightA3.setText("");
+        BackRightA3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackRightA3ActionPerformed(evt);
+            }
+        });
+
+        BackRightB.setText("");
+        BackRightB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackRightBActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1DeleteButton(evt);
+            }
+        });
+
+        jButton2.setText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,15 +143,26 @@ public class Division extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                                 .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(21, 21, 21))
-                            .addComponent(a)
-                            .addComponent(b)
-                            .addComponent(result)))
+                            .addComponent(result)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(b, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(a, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BackRightB)
+                                    .addComponent(BackRightA3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(back1)))
                 .addGap(107, 107, 107))
             .addGroup(layout.createSequentialGroup()
-                .addGap(190, 190, 190)
+                .addGap(169, 169, 169)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -128,25 +171,34 @@ public class Division extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(back1)
-                .addGap(11, 11, 11)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chia)
-                    .addComponent(clear))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BackRightA3)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BackRightB)
+                            .addComponent(jButton2))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chia)
+                            .addComponent(clear))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(14, 14, 14))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -213,6 +265,51 @@ public class Division extends javax.swing.JFrame {
         dispose();// Tắt tab chức năng chia
     }//GEN-LAST:event_back1ActionPerformed
 
+    private void BackRightA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackRightA3ActionPerformed
+        String backspace = null;
+
+        if(a.getText().length() > 0) {
+            StringBuilder s= new StringBuilder(a.getText());
+            s.deleteCharAt(a.getText().length() -1);
+            backspace = s.toString();
+            a.setText(backspace);
+        }
+    }//GEN-LAST:event_BackRightA3ActionPerformed
+
+    private void BackRightBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackRightBActionPerformed
+        String backspace = null;
+
+        if(b.getText().length() > 0) {
+            StringBuilder s= new StringBuilder(b.getText());
+            s.deleteCharAt(b.getText().length() -1);
+            backspace = s.toString();
+            b.setText(backspace);
+        }
+    }//GEN-LAST:event_BackRightBActionPerformed
+
+    private void jButton1DeleteButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1DeleteButton
+        String delete = null;
+
+        if(a.getText().length() > 0) {
+            StringBuilder s= new StringBuilder(a.getText());
+            s.deleteCharAt(0);
+            delete = s.toString();
+            a.setText(delete);
+        }
+    }//GEN-LAST:event_jButton1DeleteButton
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String delete = null;
+        if(b.getText().length() > 0 ) {
+            StringBuilder s= new StringBuilder(b.getText());
+            s.deleteCharAt(0);
+            delete = s.toString();
+            b.setText(delete);
+
+        }
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -263,12 +360,16 @@ public class Division extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackRightA3;
+    private javax.swing.JButton BackRightB;
     private javax.swing.JTextField a;
     private javax.swing.JTextField b;
     private javax.swing.JButton back;
     private javax.swing.JButton back1;
     private javax.swing.JButton chia;
     private javax.swing.JButton clear;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
